@@ -1,6 +1,6 @@
 {
   "name": "@wyre-technology/node-salesbuildr",
-  "version": "0.0.0-semantically-released",
+  "version": "1.0.0",
   "description": "Comprehensive, fully-typed Node.js/TypeScript library for the SalesBuildr public API",
   "type": "module",
   "main": "./dist/index.js",
