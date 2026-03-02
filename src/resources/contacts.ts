@@ -27,7 +27,7 @@ export class ContactsResource {
 
   /**
    * List contacts with pagination
-   * GET /contacts
+   * GET /contact
    */
   async list(params?: ContactListParams): Promise<PaginatedResponse<Contact>> {
     const queryParams: Record<string, string | number | undefined> = {
@@ -37,7 +37,7 @@ export class ContactsResource {
       queryParams['companyId'] = params.companyId;
     }
 
-    return this.httpClient.request<PaginatedResponse<Contact>>('/contacts', {
+    return this.httpClient.request<PaginatedResponse<Contact>>('/contact', {
       params: queryParams,
     });
   }
@@ -54,7 +54,7 @@ export class ContactsResource {
     return createPaginatedIterable<Contact>(
       this.httpClient,
       this.config.baseUrl,
-      '/contacts',
+      '/contact',
       params,
       additionalParams
     );
@@ -62,33 +62,33 @@ export class ContactsResource {
 
   /**
    * Get a single contact by ID
-   * GET /contacts/{id}
+   * GET /contact/{id}
    */
   async get(id: string): Promise<Contact> {
-    return this.httpClient.request<Contact>(`/contacts/${id}`);
+    return this.httpClient.request<Contact>(`/contact/${id}`);
   }
 
   /**
    * Create a new contact
-   * POST /contacts
+   * POST /contact
    */
   async create(data: ContactCreateRequest): Promise<Contact> {
-    return this.httpClient.request<Contact>('/contacts', { method: 'POST', body: data });
+    return this.httpClient.request<Contact>('/contact', { method: 'POST', body: data });
   }
 
   /**
    * Update an existing contact
-   * PUT /contacts/{id}
+   * PUT /contact/{id}
    */
   async update(id: string, data: ContactUpdateRequest): Promise<Contact> {
-    return this.httpClient.request<Contact>(`/contacts/${id}`, { method: 'PUT', body: data });
+    return this.httpClient.request<Contact>(`/contact/${id}`, { method: 'PUT', body: data });
   }
 
   /**
    * Delete a contact
-   * DELETE /contacts/{id}
+   * DELETE /contact/{id}
    */
   async delete(id: string): Promise<void> {
-    await this.httpClient.request<void>(`/contacts/${id}`, { method: 'DELETE' });
+    await this.httpClient.request<void>(`/contact/${id}`, { method: 'DELETE' });
   }
 }

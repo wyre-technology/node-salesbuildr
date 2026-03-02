@@ -22,10 +22,10 @@ export class ProductsResource {
 
   /**
    * List products with pagination
-   * GET /products
+   * GET /product
    */
   async list(params?: ProductListParams): Promise<PaginatedResponse<Product>> {
-    return this.httpClient.request<PaginatedResponse<Product>>('/products', {
+    return this.httpClient.request<PaginatedResponse<Product>>('/product', {
       params: buildPaginationParams(params),
     });
   }
@@ -37,16 +37,16 @@ export class ProductsResource {
     return createPaginatedIterable<Product>(
       this.httpClient,
       this.config.baseUrl,
-      '/products',
+      '/product',
       params
     );
   }
 
   /**
    * Get a single product by ID
-   * GET /products/{id}
+   * GET /product/{id}
    */
   async get(id: string): Promise<Product> {
-    return this.httpClient.request<Product>(`/products/${id}`);
+    return this.httpClient.request<Product>(`/product/${id}`);
   }
 }

@@ -27,10 +27,10 @@ export class OpportunitiesResource {
 
   /**
    * List opportunities with pagination
-   * GET /opportunities
+   * GET /opportunity
    */
   async list(params?: OpportunityListParams): Promise<PaginatedResponse<Opportunity>> {
-    return this.httpClient.request<PaginatedResponse<Opportunity>>('/opportunities', {
+    return this.httpClient.request<PaginatedResponse<Opportunity>>('/opportunity', {
       params: buildPaginationParams(params),
     });
   }
@@ -42,32 +42,32 @@ export class OpportunitiesResource {
     return createPaginatedIterable<Opportunity>(
       this.httpClient,
       this.config.baseUrl,
-      '/opportunities',
+      '/opportunity',
       params
     );
   }
 
   /**
    * Get a single opportunity by ID
-   * GET /opportunities/{id}
+   * GET /opportunity/{id}
    */
   async get(id: string): Promise<Opportunity> {
-    return this.httpClient.request<Opportunity>(`/opportunities/${id}`);
+    return this.httpClient.request<Opportunity>(`/opportunity/${id}`);
   }
 
   /**
    * Create a new opportunity
-   * POST /opportunities
+   * POST /opportunity
    */
   async create(data: OpportunityCreateRequest): Promise<Opportunity> {
-    return this.httpClient.request<Opportunity>('/opportunities', { method: 'POST', body: data });
+    return this.httpClient.request<Opportunity>('/opportunity', { method: 'POST', body: data });
   }
 
   /**
    * Update an existing opportunity
-   * PUT /opportunities/{id}
+   * PUT /opportunity/{id}
    */
   async update(id: string, data: OpportunityUpdateRequest): Promise<Opportunity> {
-    return this.httpClient.request<Opportunity>(`/opportunities/${id}`, { method: 'PUT', body: data });
+    return this.httpClient.request<Opportunity>(`/opportunity/${id}`, { method: 'PUT', body: data });
   }
 }

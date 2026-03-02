@@ -27,10 +27,10 @@ export class CompaniesResource {
 
   /**
    * List companies with pagination
-   * GET /companies
+   * GET /company
    */
   async list(params?: CompanyListParams): Promise<PaginatedResponse<Company>> {
-    return this.httpClient.request<PaginatedResponse<Company>>('/companies', {
+    return this.httpClient.request<PaginatedResponse<Company>>('/company', {
       params: buildPaginationParams(params),
     });
   }
@@ -42,40 +42,40 @@ export class CompaniesResource {
     return createPaginatedIterable<Company>(
       this.httpClient,
       this.config.baseUrl,
-      '/companies',
+      '/company',
       params
     );
   }
 
   /**
    * Get a single company by ID
-   * GET /companies/{id}
+   * GET /company/{id}
    */
   async get(id: string): Promise<Company> {
-    return this.httpClient.request<Company>(`/companies/${id}`);
+    return this.httpClient.request<Company>(`/company/${id}`);
   }
 
   /**
    * Create a new company
-   * POST /companies
+   * POST /company
    */
   async create(data: CompanyCreateRequest): Promise<Company> {
-    return this.httpClient.request<Company>('/companies', { method: 'POST', body: data });
+    return this.httpClient.request<Company>('/company', { method: 'POST', body: data });
   }
 
   /**
    * Update an existing company
-   * PUT /companies/{id}
+   * PUT /company/{id}
    */
   async update(id: string, data: CompanyUpdateRequest): Promise<Company> {
-    return this.httpClient.request<Company>(`/companies/${id}`, { method: 'PUT', body: data });
+    return this.httpClient.request<Company>(`/company/${id}`, { method: 'PUT', body: data });
   }
 
   /**
    * Delete a company
-   * DELETE /companies/{id}
+   * DELETE /company/{id}
    */
   async delete(id: string): Promise<void> {
-    await this.httpClient.request<void>(`/companies/${id}`, { method: 'DELETE' });
+    await this.httpClient.request<void>(`/company/${id}`, { method: 'DELETE' });
   }
 }

@@ -22,7 +22,7 @@ export class QuotesResource {
 
   /**
    * List quotes with pagination
-   * GET /quotes
+   * GET /quote
    */
   async list(params?: QuoteListParams): Promise<PaginatedResponse<Quote>> {
     const queryParams: Record<string, string | number | undefined> = {
@@ -35,7 +35,7 @@ export class QuotesResource {
       queryParams['opportunityId'] = params.opportunityId;
     }
 
-    return this.httpClient.request<PaginatedResponse<Quote>>('/quotes', {
+    return this.httpClient.request<PaginatedResponse<Quote>>('/quote', {
       params: queryParams,
     });
   }
@@ -55,7 +55,7 @@ export class QuotesResource {
     return createPaginatedIterable<Quote>(
       this.httpClient,
       this.config.baseUrl,
-      '/quotes',
+      '/quote',
       params,
       additionalParams
     );
@@ -63,17 +63,17 @@ export class QuotesResource {
 
   /**
    * Get a single quote by ID (includes line items)
-   * GET /quotes/{id}
+   * GET /quote/{id}
    */
   async get(id: string): Promise<Quote> {
-    return this.httpClient.request<Quote>(`/quotes/${id}`);
+    return this.httpClient.request<Quote>(`/quote/${id}`);
   }
 
   /**
    * Create a new quote
-   * POST /quotes
+   * POST /quote
    */
   async create(data: QuoteCreateRequest): Promise<Quote> {
-    return this.httpClient.request<Quote>('/quotes', { method: 'POST', body: data });
+    return this.httpClient.request<Quote>('/quote', { method: 'POST', body: data });
   }
 }
