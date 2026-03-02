@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/wyre-technology/node-salesbuildr/compare/v1.0.0...v1.0.1) (2026-03-02)
+
+
+### Bug Fixes
+
+* correct resource URL paths from plural to singular ([#30](https://github.com/wyre-technology/node-salesbuildr/issues/30)) ([466b476](https://github.com/wyre-technology/node-salesbuildr/commit/466b476103b353419feea715ee10694c1acf8537))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
