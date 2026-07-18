@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/wyre-technology/node-salesbuildr/compare/v1.0.1...v1.0.2) (2026-07-18)
+
+
+### Bug Fixes
+
+* read HTTP response bodies exactly once ([#27](https://github.com/wyre-technology/node-salesbuildr/issues/27)) ([157e7f8](https://github.com/wyre-technology/node-salesbuildr/commit/157e7f867db1ee862777a3e6e6088e2a8fad5ad6)), closes [wyre-technology/node-connectwise-automate#54](https://github.com/wyre-technology/node-connectwise-automate/issues/54) [connectwise-automate-mcp#54](https://github.com/connectwise-automate-mcp/issues/54)
+
 ## [1.0.1](https://github.com/wyre-technology/node-salesbuildr/compare/v1.0.0...v1.0.1) (2026-03-02)
 
 
