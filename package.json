@@ -1,5 +1,5 @@
 {
-  "name": "@wyre-technology/node-salesbuildr",
+  "name": "@wyre-ai/node-salesbuildr",
   "version": "1.0.2",
   "description": "Comprehensive, fully-typed Node.js/TypeScript library for the SalesBuildr public API",
   "type": "module",
@@ -40,12 +40,12 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wyre-technology/node-salesbuildr.git"
+    "url": "git+https://github.com/WYRE-AI/node-salesbuildr.git"
   },
   "bugs": {
-    "url": "https://github.com/wyre-technology/node-salesbuildr/issues"
+    "url": "https://github.com/WYRE-AI/node-salesbuildr/issues"
   },
-  "homepage": "https://github.com/wyre-technology/node-salesbuildr#readme",
+  "homepage": "https://github.com/WYRE-AI/node-salesbuildr#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
