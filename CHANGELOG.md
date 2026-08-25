@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/WYRE-AI/node-salesbuildr/compare/v1.0.2...v1.0.3) (2026-08-25)
+
+
+### Bug Fixes
+
+* migrate to WYRE-AI org (npm scope, ghcr namespace, registry) ([#39](https://github.com/WYRE-AI/node-salesbuildr/issues/39)) ([44c09e7](https://github.com/WYRE-AI/node-salesbuildr/commit/44c09e709aac653a94da13100d940ead493d341e))
+
 ## [1.0.2](https://github.com/wyre-technology/node-salesbuildr/compare/v1.0.1...v1.0.2) (2026-07-18)
 
 

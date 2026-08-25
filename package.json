@@ -1,6 +1,6 @@
 {
   "name": "@wyre-ai/node-salesbuildr",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Comprehensive, fully-typed Node.js/TypeScript library for the SalesBuildr public API",
   "type": "module",
   "main": "./dist/index.js",
