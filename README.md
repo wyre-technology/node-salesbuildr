@@ -1,4 +1,4 @@
-# @wyre-technology/node-salesbuildr
+# @wyre-ai/node-salesbuildr
 
 Comprehensive, fully-typed Node.js/TypeScript client library for the [SalesBuildr](https://salesbuildr.com) public API.
 
@@ -19,20 +19,20 @@ Comprehensive, fully-typed Node.js/TypeScript client library for the [SalesBuild
 ## Installation
 
 ```bash
-npm install @wyre-technology/node-salesbuildr
+npm install @wyre-ai/node-salesbuildr
 ```
 
 > **Note:** This package is published to GitHub Packages. Configure your `.npmrc`:
 >
 > ```
-> @wyre-technology:registry=https://npm.pkg.github.com
+> @wyre-ai:registry=https://npm.pkg.github.com
 > //npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
 > ```
 
 ## Quick Start
 
 ```typescript
-import { SalesbuildrClient } from '@wyre-technology/node-salesbuildr';
+import { SalesbuildrClient } from '@wyre-ai/node-salesbuildr';
 
 const client = new SalesbuildrClient({
   apiKey: process.env.SALESBUILDR_API_KEY!,
@@ -191,7 +191,7 @@ import {
   SalesbuildrValidationError,
   SalesbuildrRateLimitError,
   SalesbuildrServerError,
-} from '@wyre-technology/node-salesbuildr';
+} from '@wyre-ai/node-salesbuildr';
 
 try {
   await client.companies.get('nonexistent');
